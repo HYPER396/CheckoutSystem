@@ -123,7 +123,7 @@ void drawArticleGrid() {
     // Price
     textFont(fNorm);
     fill(C_TEXT_MID);
-    text(String.format("€ %.2f", a.price), b[0] + b[2] / 2, b[1] + b[3] / 2 + 12);
+    text(String.format("CHF %.2f", a.price), b[0] + b[2] / 2, b[1] + b[3] / 2 + 12);
     textAlign(LEFT, BASELINE);
   }
 
@@ -290,7 +290,7 @@ void drawReceiptPanel() {
   text("TOTAL", RX + 10, listBot + 18);
   textAlign(RIGHT, CENTER);
   fill(C_GREEN_DK);
-  text(String.format("€ %.2f", receipt.getTotal()), RX + RW - 10, listBot + 18);
+  text(String.format("CHF %.2f", receipt.getTotal()), RX + RW - 10, listBot + 18);
   textAlign(LEFT, BASELINE);
 
   // Buttons row
@@ -360,7 +360,7 @@ void drawEditOverlay() {
   fill(C_TEXT_GREY);
   text("Category",  68,  hdrY);
   text("Article",   250, hdrY);
-  text("Price (€)", 490, hdrY);
+  text("Price (CHF)", 490, hdrY);
   stroke(C_DIVIDER); strokeWeight(1);
   line(50, hdrY + 5, WW - 50, hdrY + 5);
   noStroke();
@@ -476,7 +476,7 @@ void drawSalesOverlay() {
   text("Sale #", 62,      listY - 4);
   text("Date / Time",   160, listY - 4);
   textAlign(RIGHT, BASELINE);
-  text("Total (€)",  WW - 58, listY - 4);
+  text("Total (CHF)",  WW - 58, listY - 4);
   textAlign(LEFT, BASELINE);
   stroke(C_DIVIDER); strokeWeight(1);
   line(50, listY, WW - 50, listY);
@@ -508,7 +508,7 @@ void drawSalesOverlay() {
     textAlign(RIGHT, CENTER);
     fill(sel ? C_GREEN_DK : C_GREEN);
     textFont(fBold);
-    text(String.format("€ %.2f", s.total), WW - 58, ry + rowH / 2);
+    text(String.format("CHF %.2f", s.total), WW - 58, ry + rowH / 2);
     textAlign(LEFT, BASELINE);
   }
   noClip();
@@ -550,10 +550,10 @@ void drawSalesOverlay() {
     textAlign(RIGHT, CENTER);
     fill(C_TEXT_MID);
     text(si.qty + " ×",                           WW - 300, ry + iRowH / 2);
-    text(String.format("€ %.2f", si.unitPrice),   WW - 200, ry + iRowH / 2);
+    text(String.format("CHF %.2f", si.unitPrice),   WW - 200, ry + iRowH / 2);
     fill(C_TEXT_MAIN);
     textFont(fBold);
-    text(String.format("€ %.2f", si.subtotal),    WW - 58,  ry + iRowH / 2);
+    text(String.format("CHF %.2f", si.subtotal),    WW - 58,  ry + iRowH / 2);
     textAlign(LEFT, BASELINE);
   }
   noClip();
