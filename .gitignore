@@ -1,0 +1,13 @@
+# SQLite database (contains live data, not source)
+data/checkout.db
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Processing library cache
+applet/
